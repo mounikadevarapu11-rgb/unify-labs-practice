@@ -1,0 +1,158 @@
+
+:root {
+  --bg-color: #0f172a;
+  --text-color: #e5e7eb;
+  --primary: #38bdf8;
+}
+
+#theme-toggle:checked ~ .container {
+  --bg-color: #f9fafb;
+  --text-color: #111827;
+  --primary: #6366f1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+.container {
+  min-height: 100vh;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+
+nav {
+  background: #020617;
+  padding: 15px 20px;
+}
+
+.nav-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+}
+
+.menu {
+  display: flex;
+  gap: 20px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+.hamburger {
+  display: none;
+  font-size: 26px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  #menu-toggle:checked ~ .menu {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
+
+
+.buttons {
+  padding: 60px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+
+.neon-btn {
+  padding: 15px 35px;
+  background: transparent;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+  letter-spacing: 2px;
+  box-shadow: 0 0 15px var(--primary);
+  transition: 0.3s;
+}
+
+.neon-btn:hover {
+  background: var(--primary);
+  color: black;
+  box-shadow: 0 0 30px var(--primary);
+}
+
+
+.rotate-btn {
+  position: relative;
+  background: transparent;
+  border: none;
+  overflow: hidden;
+}
+
+.rotate-btn::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  background: conic-gradient(
+    transparent,
+    var(--primary),
+    transparent
+  );
+  animation: rotate 3s linear infinite;
+}
+
+.rotate-btn span {
+  position: relative;
+  display: block;
+  padding: 15px 40px;
+  background: #020617;
+  color: white;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.micro-btn {
+  padding: 15px 35px;
+  background: var(--primary);
+  border: none;
+  color: black;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.micro-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+}
+
+.theme-switch {
+  margin: 40px;
+}
