@@ -1,0 +1,159 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #050505;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+
+.particles span {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: cyan;
+  border-radius: 50%;
+  animation: float 10s linear infinite;
+}
+
+.particles span:nth-child(n) {
+  left: calc(5% * var(--i));
+}
+
+.particles span {
+  left: calc(5% * (var(--i)));
+}
+
+.particles span:nth-child(odd) {
+  animation-duration: 7s;
+}
+
+.particles span:nth-child(even) {
+  animation-duration: 11s;
+}
+
+@keyframes float {
+  0% { transform: translateY(100vh); opacity: 0; }
+  50% { opacity: 1; }
+  100% { transform: translateY(-10vh); opacity: 0; }
+}
+
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* NEON FLICKER */
+.neon-text {
+  font-size: 4rem;
+  color: #0ff;
+  text-shadow: 0 0 10px #0ff, 0 0 30px #0ff;
+  animation: flicker 2s infinite;
+}
+
+@keyframes flicker {
+  0%, 18%, 22%, 60%, 100% { opacity: 1; }
+  20%, 24%, 62% { opacity: 0.3; }
+}
+
+/* TYPEWRITER */
+.typewriter {
+  margin-top: 15px;
+  font-size: 1.4rem;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid cyan;
+  width: 0;
+  animation: typing 4s steps(40) forwards, blink 0.7s infinite;
+}
+
+@keyframes typing {
+  to { width: 420px; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* BUTTON */
+.btn {
+  margin-top: 30px;
+  padding: 12px 35px;
+  background: linear-gradient(45deg, cyan, purple);
+  color: #000;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+}
+
+#modal-toggle {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+#modal-toggle:checked + .modal {
+  display: flex;
+}
+
+.modal-box {
+  background: #111;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.close-btn {
+  display: inline-block;
+  margin-top: 20px;
+  color: cyan;
+  cursor: pointer;
+}
+
+
+.gallery {
+  column-count: 3;
+  gap: 15px;
+  padding: 40px;
+}
+
+.gallery img {
+  width: 100%;
+  margin-bottom: 25px;
+  filter: grayscale(100%);
+  transition: filter 0.5s, transform 0.5s;
+}
+
+.gallery img:hover {
+  filter: grayscale(5%);
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .gallery {
+    column-count: 1;
+  }
+}
