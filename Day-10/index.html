@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instagram Clone</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- AUTH SECTION -->
+<section class="auth-container">
+  <div class="auth-box">
+    <h1 class="logo">Instagram</h1>
+
+    <form id="loginForm">
+      <div class="field">
+        <input
+  type="email"
+  required
+  pattern="test@gmail.com">
+    <label>Email</label>
+
+
+      </div>
+
+      <div class="field">
+       <input
+  type="password"
+  required
+  pattern="123456"
+>
+
+        <label>Password</label>
+      </div>
+         <!-- hidden checkbox -->
+<input type="checkbox" id="loginToggle" hidden>
+
+<!-- login button -->
+<label for="loginToggle" class="login-btn">
+  Log In
+</label>
+
+<!-- success message -->
+<p class="success-msg">
+  ✅ Login Successful
+</p>
+
+             
+    </form>
+
+    <p class="divider">OR</p>
+    <a href="#" class="fb-login">Log in with Facebook</a>
+  </div>
+</section>
+
+<!-- TEAM SECTION -->
+<section class="team">
+  <h2>Our Team</h2>
+
+  <div class="team-grid">
+    <div class="card">
+      <img src="https://1.bp.blogspot.com/-t8l00gurXdU/Xr0K7tEXw3I/AAAAAAAAAmY/Sy5zgIeHD0InRDwANrmo_BPV_tCOwTmLACLcBGAsYHQ/s1600/Kevin_systrom_founder_of_instagram%2B%25281%2529.png" />
+      <div class="overlay">
+        <a href="#">LinkedIn</a>
+        <a href="#">Twitter</a>
+      </div>
+      <h3>kevin</h3>
+      <p>Frontend Developer</p>
+    </div>
+
+    <div class="card">
+      <img src="https://static.startuptalky.com/2022/07/Kevin-Systrom-Instagram-Founder-StartupTalky.jpg" />
+      <div class="overlay">
+        <a href="#">LinkedIn</a>
+        <a href="#">GitHub</a>
+      </div>
+      <h3>Rahul</h3>
+      <p>UI Designer</p>
+    </div>
+
+    <div class="card">
+      <img src="https://tse3.mm.bing.net/th/id/OIP.krpcev2qyY--ENav7QkUngHaFj?w=750&h=563&rs=1&pid=ImgDetMain&o=7&rm=3" />
+      <div class="overlay">
+        <a href="#">LinkedIn</a>
+        <a href="#">Instagram</a>
+      </div>
+      <h3>Mark</h3>
+      <p>Backend Engineer</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

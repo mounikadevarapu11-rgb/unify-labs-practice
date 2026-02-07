@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&family=Inter:wght@400;500;600&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background: #fafafa;
+}
+
+/* AUTH */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.auth-box {
+  background: #fff;
+  border: 1px solid #dbdbdb;
+  padding: 40px;
+  width: 100%;
+  max-width: 350px;
+}
+
+.logo {
+  font-family: 'Grand Hotel', cursive;
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.field {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.field input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dbdbdb;
+}
+
+.field label {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #999;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.field input:focus + label,
+.field input:valid + label {
+  top: 5px;
+  font-size: 12px;
+}
+
+button {
+  width: 100%;
+  background: #0095f6;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.divider {
+  text-align: center;
+  margin: 20px 0;
+  color: #999;
+}
+
+.fb-login {
+  text-align: center;
+  display: block;
+  color: #385185;
+  font-weight: 500;
+}
+
+/* TEAM */
+.team {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.team h2 {
+  margin-bottom: 40px;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  position: relative;
+}
+
+.card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.overlay a {
+  color: white;
+}
+
+.login-btn {
+  display: block;
+  width: 100%;
+  background: #0095f6;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.success-msg {
+  display: none;
+  color: green;
+  text-align: center;
+  margin-top: 15px;
+  font-weight: 500;
+}
+
+#loginToggle:checked ~ .success-msg {
+  display: block;
+}
+.error-msg {
+  display: none;
+  color: red;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+/* wrong input unte error show */
+.login-form input:invalid ~ .error-msg {
+  display: block;
+}
+
