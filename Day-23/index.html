@@ -1,11 +1,28 @@
-<!-- 
-  DAY 23 PRACTICE LAB
-  Practice the concepts from today's video lecture below.
--->
-<div id="root">
-    <div class="lab-container">
-        <h1>Lab <span>Session</span> {{ selectedDay }}</h1>
-        <p>Console is active. Use the <strong>JS Tab</strong> to practice logic.</p>
-        <div id="display" class="debug-panel">Waiting for JS input...</div>
-    </div>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Unify Labs - Interns</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Unify Labs - Intern Management</h2>
+
+<button onclick="createDatabase()">Create Database</button>
+<button onclick="addCollection()">Add Collection</button>
+<button onclick="insertInterns()">Insert Interns</button>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Role</th>
+      <th>Joined Date</th>
+    </tr>
+  </thead>
+  <tbody id="tableBody"></tbody>
+</table>
+
+<script src="script.js"></script>
+</body>
+</html>
