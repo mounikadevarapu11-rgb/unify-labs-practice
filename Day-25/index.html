@@ -1,11 +1,33 @@
-<!-- 
-  DAY 25 PRACTICE LAB
-  Practice the concepts from today's video lecture below.
--->
-<div id="root">
-    <div class="lab-container">
-        <h1>Lab <span>Session</span> {{ selectedDay }}</h1>
-        <p>Console is active. Use the <strong>JS Tab</strong> to practice logic.</p>
-        <div id="display" class="debug-panel">Waiting for JS input...</div>
-    </div>
-</div>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mass Updates Simulation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Mass Updates</h2>
+
+<button onclick="increasePrice()">Increase Electronics Price +10</button>
+<button onclick="setFeatured()">Set Featured (Price > 500)</button>
+<button onclick="deleteStock()">Delete Stock = 0</button>
+<button onclick="showCount()">Count Documents</button>
+
+<h3 id="count"></h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Category</th>
+      <th>Price</th>
+      <th>Stock</th>
+      <th>Featured</th>
+    </tr>
+  </thead>
+  <tbody id="tableBody"></tbody>
+</table>
+
+<script src="script.js"></script>
+</body>
+</html>
