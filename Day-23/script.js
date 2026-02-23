@@ -18,8 +18,8 @@ function addCollection() {
 function insertInterns() {
   internsCollection = [
     { name: "Mounika", role: "Frontend Developer", joinedDate: "2024-01-10" },
-    { name: "Rahul", role: "Backend Developer", joinedDate: "2024-02-15" },
-    { name: "Sneha", role: "UI Designer", joinedDate: "2024-03-01" }
+    { name: "Ammu", role: "Backend Developer", joinedDate: "2024-02-15" },
+    { name: "Archana", role: "UI Designer", joinedDate: "2024-03-01" }
   ];
   displayInterns();
 }
